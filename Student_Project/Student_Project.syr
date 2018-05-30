@@ -1,0 +1,888 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Student_Project.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Student_Project.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Student_Project"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Student_Project
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Dan\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Student_Project\Student_Project.v" into library work
+Parsing module <Student_Project>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Student_Project>.
+WARNING:HDLCompiler:872 - "C:\Users\Dan\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Student_Project\Student_Project.v" Line 24: Using initial value of CYCLE_COUNT since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Dan\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Student_Project\Student_Project.v" Line 28: Using initial value of CYCLE_COUNT200Hz since it is never assigned
+WARNING:HDLCompiler:634 - "C:\Users\Dan\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Student_Project\Student_Project.v" Line 35: Net <sequence[3]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Student_Project>.
+    Related source file is "C:\Users\Dan\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Student_Project\Student_Project.v".
+        SHOW = 0
+        READY = 1
+WARNING:Xst:647 - Input <IO_DSW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'sequence<3:0>', unconnected in block 'Student_Project', is tied to its initial value (0000).
+    Found 1-bit register for signal <clock1>.
+    Found 32-bit register for signal <CycleCounter2>.
+    Found 1-bit register for signal <clock2>.
+    Found 32-bit register for signal <display>.
+    Found 4-bit register for signal <IO_SSEGD>.
+    Found 8-bit register for signal <IO_SSEG>.
+    Found 4-bit register for signal <simonSays>.
+    Found 1-bit register for signal <sequence<7>>.
+    Found 1-bit register for signal <sequence<6>>.
+    Found 1-bit register for signal <sequence<5>>.
+    Found 1-bit register for signal <sequence<4>>.
+    Found 4-bit register for signal <sequenceHold>.
+    Found 4-bit register for signal <score0>.
+    Found 4-bit register for signal <score1>.
+    Found 32-bit register for signal <decrementFlag>.
+    Found 1-bit register for signal <state>.
+    Found 4-bit register for signal <simonSays1>.
+    Found 4-bit register for signal <sequenceHold1>.
+    Found 32-bit register for signal <i>.
+    Found 4-bit register for signal <simonSays2>.
+    Found 4-bit register for signal <sequenceHold2>.
+    Found 32-bit register for signal <j>.
+    Found 4-bit register for signal <simonSays3>.
+    Found 4-bit register for signal <sequenceHold3>.
+    Found 32-bit register for signal <k>.
+    Found 1-bit register for signal <simonSays4<3>>.
+    Found 1-bit register for signal <simonSays4<2>>.
+    Found 1-bit register for signal <simonSays4<1>>.
+    Found 1-bit register for signal <simonSays4<0>>.
+    Found 4-bit register for signal <sequenceHold4>.
+    Found 32-bit register for signal <l>.
+    Found 1-bit register for signal <simonSays5<3>>.
+    Found 1-bit register for signal <simonSays5<2>>.
+    Found 1-bit register for signal <simonSays5<1>>.
+    Found 1-bit register for signal <simonSays5<0>>.
+    Found 4-bit register for signal <sequenceHold5>.
+    Found 32-bit register for signal <m>.
+    Found 1-bit register for signal <simonSays6<3>>.
+    Found 1-bit register for signal <simonSays6<2>>.
+    Found 1-bit register for signal <simonSays6<1>>.
+    Found 1-bit register for signal <simonSays6<0>>.
+    Found 4-bit register for signal <sequenceHold6>.
+    Found 32-bit register for signal <n>.
+    Found 1-bit register for signal <simonSays7<3>>.
+    Found 1-bit register for signal <simonSays7<2>>.
+    Found 1-bit register for signal <simonSays7<1>>.
+    Found 1-bit register for signal <simonSays7<0>>.
+    Found 4-bit register for signal <sequenceHold7>.
+    Found 32-bit register for signal <p>.
+    Found 32-bit register for signal <a>.
+    Found 3-bit register for signal <round>.
+    Found 3-bit register for signal <order>.
+    Found 32-bit register for signal <CycleCounter>.
+    Found finite state machine <FSM_0> for signal <round>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 306                                            |
+    | Inputs             | 17                                             |
+    | Outputs            | 7                                              |
+    | Clock              | clock1 (rising_edge)                           |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <order>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 48                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 8                                              |
+    | Clock              | clock1 (rising_edge)                           |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1062_OUT> created at line 975.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1070_OUT> created at line 988.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1078_OUT> created at line 1001.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1086_OUT> created at line 1014.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1094_OUT> created at line 1027.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1102_OUT> created at line 1040.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1110_OUT> created at line 1053.
+    Found 4-bit subtractor for signal <score0[3]_PWR_1_o_sub_1118_OUT> created at line 1066.
+    Found 4-bit subtractor for signal <score0[3]_GND_1_o_sub_1124_OUT> created at line 1075.
+    Found 4-bit subtractor for signal <score1[3]_GND_1_o_sub_1126_OUT> created at line 1078.
+    Found 32-bit adder for signal <CycleCounter[31]_GND_1_o_add_3_OUT> created at line 59.
+    Found 32-bit adder for signal <CycleCounter2[31]_GND_1_o_add_8_OUT> created at line 70.
+    Found 32-bit adder for signal <display[31]_GND_1_o_add_15_OUT> created at line 113.
+    Found 32-bit adder for signal <i[31]_GND_1_o_add_191_OUT> created at line 394.
+    Found 32-bit adder for signal <j[31]_GND_1_o_add_194_OUT> created at line 397.
+    Found 32-bit adder for signal <k[31]_GND_1_o_add_197_OUT> created at line 400.
+    Found 32-bit adder for signal <l[31]_GND_1_o_add_200_OUT> created at line 403.
+    Found 32-bit adder for signal <m[31]_GND_1_o_add_203_OUT> created at line 406.
+    Found 32-bit adder for signal <n[31]_GND_1_o_add_206_OUT> created at line 409.
+    Found 32-bit adder for signal <p[31]_GND_1_o_add_209_OUT> created at line 412.
+    Found 32-bit adder for signal <a[31]_GND_1_o_add_423_OUT> created at line 435.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1059_OUT> created at line 973.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1067_OUT> created at line 986.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1075_OUT> created at line 999.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1083_OUT> created at line 1012.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1091_OUT> created at line 1025.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1099_OUT> created at line 1038.
+    Found 4-bit adder for signal <score0[3]_GND_1_o_add_1107_OUT> created at line 1051.
+    Found 4-bit adder for signal <score0[3]_PWR_1_o_add_1115_OUT> created at line 1064.
+    Found 4-bit adder for signal <score1[3]_GND_1_o_add_1118_OUT> created at line 1067.
+    Found 16x8-bit Read Only RAM for signal <score0segs>
+    Found 16x8-bit Read Only RAM for signal <score1segs>
+    Found 4-bit 7-to-1 multiplexer for signal <sequenceHold1[3]_sequenceHold1[3]_mux_384_OUT> created at line 180.
+    Found 4-bit 6-to-1 multiplexer for signal <sequenceHold2[3]_sequenceHold2[3]_mux_387_OUT> created at line 180.
+    Found 4-bit 7-to-1 multiplexer for signal <sequenceHold3[3]_sequenceHold3[3]_mux_390_OUT> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <sequence[7]_simonSays[3]_MUX_343_o> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <sequence[6]_PWR_1_o_MUX_344_o> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <sequence[5]_simonSays[1]_MUX_345_o> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <sequence[4]_simonSays[0]_MUX_346_o> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <state_PWR_1_o_MUX_347_o> created at line 180.
+    Found 4-bit 4-to-1 multiplexer for signal <_n2423> created at line 180.
+    Found 4-bit 3-to-1 multiplexer for signal <_n2425> created at line 180.
+    Found 4-bit 4-to-1 multiplexer for signal <_n2427> created at line 180.
+    Found 1-bit 8-to-1 multiplexer for signal <state_sequenceHold[3]_MUX_415_o> created at line 477.
+    Found 4-bit 8-to-1 multiplexer for signal <score0[3]_GND_1_o_mux_1396_OUT> created at line 477.
+    Found 4-bit 8-to-1 multiplexer for signal <score1[3]_score1[3]_mux_1397_OUT> created at line 477.
+    Found 32-bit 8-to-1 multiplexer for signal <decrementFlag[31]_GND_1_o_mux_1398_OUT> created at line 477.
+    Found 32-bit comparator greater for signal <n0002> created at line 58
+    Found 32-bit comparator greater for signal <n0010> created at line 69
+    Found 32-bit comparator greater for signal <i[31]_GND_1_o_LessThan_194_o> created at line 395
+    Found 32-bit comparator greater for signal <j[31]_GND_1_o_LessThan_197_o> created at line 398
+    Found 32-bit comparator greater for signal <k[31]_GND_1_o_LessThan_200_o> created at line 401
+    Found 32-bit comparator greater for signal <l[31]_GND_1_o_LessThan_203_o> created at line 404
+    Found 32-bit comparator greater for signal <m[31]_GND_1_o_LessThan_206_o> created at line 407
+    Found 32-bit comparator greater for signal <n[31]_GND_1_o_LessThan_209_o> created at line 410
+    Found 32-bit comparator greater for signal <p[31]_GND_1_o_LessThan_212_o> created at line 413
+    Found 32-bit comparator greater for signal <a[31]_GND_1_o_LessThan_426_o> created at line 436
+    Found 4-bit comparator equal for signal <sequenceHold[3]_PBarray[3]_equal_430_o> created at line 967
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1061_o> created at line 974
+    Found 4-bit comparator equal for signal <sequenceHold1[3]_PBarray[3]_equal_1066_o> created at line 980
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1069_o> created at line 987
+    Found 4-bit comparator equal for signal <sequenceHold2[3]_PBarray[3]_equal_1074_o> created at line 993
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1077_o> created at line 1000
+    Found 4-bit comparator equal for signal <sequenceHold3[3]_PBarray[3]_equal_1082_o> created at line 1006
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1085_o> created at line 1013
+    Found 4-bit comparator equal for signal <sequenceHold4[3]_PBarray[3]_equal_1090_o> created at line 1019
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1093_o> created at line 1026
+    Found 4-bit comparator equal for signal <sequenceHold5[3]_PBarray[3]_equal_1098_o> created at line 1032
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1101_o> created at line 1039
+    Found 4-bit comparator equal for signal <sequenceHold6[3]_PBarray[3]_equal_1106_o> created at line 1045
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1109_o> created at line 1052
+    Found 4-bit comparator equal for signal <sequenceHold7[3]_PBarray[3]_equal_1114_o> created at line 1058
+    Found 4-bit comparator greater for signal <PWR_1_o_score0[3]_LessThan_1117_o> created at line 1065
+    Summary:
+	inferred   2 RAM(s).
+	inferred  30 Adder/Subtractor(s).
+	inferred 475 D-type flip-flop(s).
+	inferred  26 Comparator(s).
+	inferred 631 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <Student_Project> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port Read Only RAM                    : 2
+# Adders/Subtractors                                   : 30
+ 32-bit adder                                          : 11
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 10
+# Registers                                            : 51
+ 1-bit register                                        : 23
+ 32-bit register                                       : 12
+ 4-bit register                                        : 15
+ 8-bit register                                        : 1
+# Comparators                                          : 26
+ 32-bit comparator greater                             : 10
+ 4-bit comparator equal                                : 8
+ 4-bit comparator greater                              : 8
+# Multiplexers                                         : 631
+ 1-bit 2-to-1 multiplexer                              : 224
+ 1-bit 8-to-1 multiplexer                              : 6
+ 32-bit 2-to-1 multiplexer                             : 149
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 243
+ 4-bit 3-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 2
+ 4-bit 6-to-1 multiplexer                              : 1
+ 4-bit 7-to-1 multiplexer                              : 2
+ 4-bit 8-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Student_Project>.
+The following registers are absorbed into counter <CycleCounter2>: 1 register on signal <CycleCounter2>.
+The following registers are absorbed into counter <CycleCounter>: 1 register on signal <CycleCounter>.
+The following registers are absorbed into counter <display>: 1 register on signal <display>.
+INFO:Xst:3231 - The small RAM <Mram_score0segs> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score0>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <score0segs>    |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_score1segs> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score1>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <score1segs>    |          |
+    -----------------------------------------------------------------------
+Unit <Student_Project> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port distributed Read Only RAM        : 2
+# Adders/Subtractors                                   : 28
+ 32-bit adder                                          : 9
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 10
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Registers                                            : 379
+ Flip-Flops                                            : 379
+# Comparators                                          : 26
+ 32-bit comparator greater                             : 10
+ 4-bit comparator equal                                : 8
+ 4-bit comparator greater                              : 8
+# Multiplexers                                         : 680
+ 1-bit 2-to-1 multiplexer                              : 280
+ 1-bit 8-to-1 multiplexer                              : 6
+ 32-bit 2-to-1 multiplexer                             : 148
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 237
+ 4-bit 3-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 2
+ 4-bit 6-to-1 multiplexer                              : 1
+ 4-bit 7-to-1 multiplexer                              : 2
+ 4-bit 8-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <IO_SSEGD_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <IO_SSEGD_1> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <order[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+ 111   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <round[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+ 111   | 100
+-------------------
+WARNING:Xst:2677 - Node <simonSays7_2> of sequential type is unconnected in block <Student_Project>.
+INFO:Xst:2261 - The FF/Latch <IO_SSEGD_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <IO_SSEG_7> 
+
+Optimizing unit <Student_Project> ...
+WARNING:Xst:1293 - FF/Latch <simonSays4_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays5_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays6_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays7_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays7_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_SSEGD_0> (without init value) has a constant value of 1 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays5_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays6_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <simonSays7_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold4_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold7_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold7_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold7_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_7> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_6> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_5> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_4> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_2> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold6_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold6_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold5_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sequenceHold5_0> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_31> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_30> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_29> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_28> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_27> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_26> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_25> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_24> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_23> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_22> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_21> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_20> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_19> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_31> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_30> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_29> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_28> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_27> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_26> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_25> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_24> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_23> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_22> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_21> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_20> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_19> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_18> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_17> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_16> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_15> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_14> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_13> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_12> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_11> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_10> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_9> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <decrementFlag_8> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_24> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_23> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_22> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_21> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_20> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_19> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_18> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_17> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_16> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_15> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_14> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_13> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_12> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_11> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_10> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_9> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_8> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_7> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_6> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_5> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_4> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_2> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_18> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_17> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_16> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_15> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_14> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_13> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_12> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_11> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_10> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_9> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_8> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_7> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_6> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_5> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_4> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_3> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_2> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <p_1> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_31> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_30> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_29> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_28> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_27> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_26> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <a_25> has a constant value of 0 in block <Student_Project>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sequenceHold2_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays2_0> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold2_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays2_1> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold2_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays2_2> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold2_3> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays2_3> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold3_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays3_0> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold3_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays3_1> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold3_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays3_2> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold3_3> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays3_3> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold4_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays4_0> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold4_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays4_1> 
+INFO:Xst:2261 - The FF/Latch <simonSays4_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold4_2> 
+INFO:Xst:2261 - The FF/Latch <simonSays5_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold5_2> 
+INFO:Xst:2261 - The FF/Latch <simonSays5_3> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold5_3> 
+INFO:Xst:2261 - The FF/Latch <simonSays_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold_0> 
+INFO:Xst:2261 - The FF/Latch <simonSays_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold_1> 
+INFO:Xst:2261 - The FF/Latch <simonSays_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold_2> 
+INFO:Xst:2261 - The FF/Latch <simonSays_3> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold_3> 
+INFO:Xst:2261 - The FF/Latch <simonSays6_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold6_1> 
+INFO:Xst:2261 - The FF/Latch <simonSays6_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <sequenceHold6_2> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold1_0> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays1_0> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold1_1> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays1_1> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold1_2> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays1_2> 
+INFO:Xst:2261 - The FF/Latch <sequenceHold1_3> in Unit <Student_Project> is equivalent to the following FF/Latch, which will be removed : <simonSays1_3> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Student_Project, actual ratio is 23.
+FlipFlop order_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop order_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop order_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop round_FSM_FFd1 has been replicated 5 time(s)
+FlipFlop round_FSM_FFd2 has been replicated 5 time(s)
+FlipFlop round_FSM_FFd3 has been replicated 4 time(s)
+FlipFlop state has been replicated 5 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 368
+ Flip-Flops                                            : 368
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Student_Project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1894
+#      GND                         : 1
+#      INV                         : 25
+#      LUT1                        : 306
+#      LUT2                        : 101
+#      LUT3                        : 60
+#      LUT4                        : 61
+#      LUT5                        : 214
+#      LUT6                        : 408
+#      MUXCY                       : 383
+#      MUXF7                       : 10
+#      VCC                         : 1
+#      XORCY                       : 324
+# FlipFlops/Latches                : 368
+#      FD                          : 100
+#      FDE                         : 199
+#      FDR                         : 65
+#      FDRE                        : 4
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 4
+#      OBUF                        : 25
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             368  out of  11440     3%  
+ Number of Slice LUTs:                 1175  out of   5720    20%  
+    Number used as Logic:              1175  out of   5720    20%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1193
+   Number with an unused Flip Flop:     825  out of   1193    69%  
+   Number with an unused LUT:            18  out of   1193     1%  
+   Number of fully used LUT-FF pairs:   350  out of   1193    29%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                          38
+ Number of bonded IOBs:                  30  out of    102    29%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+M_CLOCK                            | BUFGP                  | 66    |
+clock1                             | BUFG                   | 261   |
+clock2                             | BUFG                   | 41    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.691ns (Maximum Frequency: 115.062MHz)
+   Minimum input arrival time before clock: 9.697ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M_CLOCK'
+  Clock period: 4.645ns (frequency: 215.262MHz)
+  Total number of paths / destination ports: 4127 / 132
+-------------------------------------------------------------------------
+Delay:               4.645ns (Levels of Logic = 9)
+  Source:            CycleCounter2_4 (FF)
+  Destination:       CycleCounter2_0 (FF)
+  Source Clock:      M_CLOCK rising
+  Destination Clock: M_CLOCK rising
+
+  Data Path: CycleCounter2_4 to CycleCounter2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.995  CycleCounter2_4 (CycleCounter2_4)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_n0010_lut<0> (Mcompar_n0010_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0010_cy<0> (Mcompar_n0010_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0010_cy<1> (Mcompar_n0010_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0010_cy<2> (Mcompar_n0010_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0010_cy<3> (Mcompar_n0010_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0010_cy<4> (Mcompar_n0010_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0010_cy<5> (Mcompar_n0010_cy<5>)
+     MUXCY:CI->O           1   0.213   0.579  Mcompar_n0010_cy<6> (Mcompar_n0010_cy<6>)
+     INV:I->O             33   0.206   1.305  Mcompar_n0010_cy<6>_inv1_INV_0 (n0010)
+     FDR:R                     0.430          CycleCounter2_0
+    ----------------------------------------
+    Total                      4.645ns (1.766ns logic, 2.879ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock1'
+  Clock period: 8.691ns (frequency: 115.062MHz)
+  Total number of paths / destination ports: 1111767 / 463
+-------------------------------------------------------------------------
+Delay:               8.691ns (Levels of Logic = 8)
+  Source:            round_FSM_FFd2_1 (FF)
+  Destination:       decrementFlag_0 (FF)
+  Source Clock:      clock1 rising
+  Destination Clock: clock1 rising
+
+  Data Path: round_FSM_FFd2_1 to decrementFlag_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.447   0.982  round_FSM_FFd2_1 (round_FSM_FFd2_1)
+     LUT3:I2->O            6   0.205   0.849  Mmux_sequenceHold6[3]_sequenceHold6[3]_mux_418_OUT211 (Mmux_sequenceHold6[3]_sequenceHold6[3]_mux_418_OUT21)
+     LUT5:I3->O            3   0.203   0.651  sequenceHold2[3]_PBarray[3]_equal_1074_o4_SW0 (N53)
+     LUT5:I4->O           16   0.205   1.005  sequenceHold2[3]_PBarray[3]_equal_1074_o4 (sequenceHold2[3]_PBarray[3]_equal_1074_o)
+     LUT4:I3->O           15   0.205   0.982  round_FSM_FFd3-In121_1 (round_FSM_FFd3-In121)
+     LUT6:I5->O            7   0.205   0.774  Mmux_GND_1_o_decrementFlag[31]_mux_1055_OUT1019411 (Mmux_GND_1_o_decrementFlag[31]_mux_1055_OUT101941)
+     LUT6:I5->O            1   0.205   0.684  Mmux_GND_1_o_decrementFlag[31]_mux_1055_OUT21 (GND_1_o_decrementFlag[31]_mux_1055_OUT<0>)
+     LUT6:I4->O            1   0.203   0.580  Mmux_decrementFlag[31]_GND_1_o_mux_1398_OUT_3 (Mmux_decrementFlag[31]_GND_1_o_mux_1398_OUT_3)
+     LUT6:I5->O            1   0.205   0.000  Mmux_decrementFlag[31]_decrementFlag[31]_mux_1419_OUT11 (decrementFlag[31]_decrementFlag[31]_mux_1419_OUT<0>)
+     FD:D                      0.102          decrementFlag_0
+    ----------------------------------------
+    Total                      8.691ns (2.185ns logic, 6.506ns route)
+                                       (25.1% logic, 74.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock2'
+  Clock period: 6.713ns (frequency: 148.964MHz)
+  Total number of paths / destination ports: 8400 / 41
+-------------------------------------------------------------------------
+Delay:               6.713ns (Levels of Logic = 9)
+  Source:            display_0 (FF)
+  Destination:       IO_SSEG_0 (FF)
+  Source Clock:      clock2 rising
+  Destination Clock: clock2 rising
+
+  Data Path: display_0 to IO_SSEG_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  display_0 (display_0)
+     INV:I->O              1   0.206   0.000  Madd_display[31]_GND_1_o_add_15_OUT_lut<0>_INV_0 (Madd_display[31]_GND_1_o_add_15_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_display[31]_GND_1_o_add_15_OUT_cy<0> (Madd_display[31]_GND_1_o_add_15_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_display[31]_GND_1_o_add_15_OUT_cy<1> (Madd_display[31]_GND_1_o_add_15_OUT_cy<1>)
+     XORCY:CI->O           1   0.180   0.944  Madd_display[31]_GND_1_o_add_15_OUT_xor<2> (display[31]_GND_1_o_add_15_OUT<2>)
+     LUT6:I0->O            1   0.203   0.684  display[31]_GND_1_o_equal_18_o<31>15 (display[31]_GND_1_o_equal_18_o<31>15)
+     LUT6:I4->O            5   0.203   1.059  display[31]_GND_1_o_equal_18_o<31>16 (display[31]_GND_1_o_equal_18_o<31>16)
+     LUT6:I1->O            3   0.203   0.651  display[31]_GND_1_o_equal_18_o<31>2 (display[31]_GND_1_o_equal_18_o)
+     LUT5:I4->O            1   0.205   0.580  display[31]_score0segs[7]_select_21_OUT<5>_SW0 (N37)
+     LUT6:I5->O            1   0.205   0.000  display[31]_score0segs[7]_select_21_OUT<5> (display[31]_score0segs[7]_select_21_OUT<5>)
+     FD:D                      0.102          IO_SSEG_5
+    ----------------------------------------
+    Total                      6.713ns (2.145ns logic, 4.568ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock1'
+  Total number of paths / destination ports: 3998 / 63
+-------------------------------------------------------------------------
+Offset:              9.697ns (Levels of Logic = 9)
+  Source:            IO_PB<1> (PAD)
+  Destination:       score1_2 (FF)
+  Destination Clock: clock1 rising
+
+  Data Path: IO_PB<1> to score1_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.222   1.205  IO_PB_1_IBUF (IO_PB_1_IBUF)
+     LUT4:I0->O            1   0.203   0.808  sequenceHold4[3]_PBarray[3]_equal_1090_o41 (sequenceHold4[3]_PBarray[3]_equal_1090_o4)
+     LUT6:I3->O            4   0.205   0.684  sequenceHold4[3]_PBarray[3]_equal_1090_o42 (sequenceHold4[3]_PBarray[3]_equal_1090_o41)
+     LUT6:I5->O           12   0.205   1.013  order_FSM_FFd3-In331 (order_FSM_FFd3-In33)
+     LUT6:I4->O           14   0.203   0.958  Mmux_GND_1_o_decrementFlag[31]_mux_1055_OUT10111 (Mmux_GND_1_o_decrementFlag[31]_mux_1055_OUT1011)
+     LUT6:I5->O            1   0.205   0.808  Mmux_score1[3]_score1[3]_mux_1042_OUT1292 (Mmux_score1[3]_score1[3]_mux_1042_OUT1291)
+     LUT6:I3->O            1   0.205   0.684  Mmux_score1[3]_score1[3]_mux_1042_OUT1293 (score1[3]_score1[3]_mux_1230_OUT<2>)
+     LUT6:I4->O            1   0.203   0.580  Mmux_score1[3]_score1[3]_mux_1397_OUT_32 (Mmux_score1[3]_score1[3]_mux_1397_OUT_32)
+     LUT6:I5->O            1   0.205   0.000  Mmux_score1[3]_score1[3]_mux_1418_OUT31 (score1[3]_score1[3]_mux_1418_OUT<2>)
+     FD:D                      0.102          score1_2
+    ----------------------------------------
+    Total                      9.697ns (2.958ns logic, 6.739ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock2'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            IO_SSEG_6 (FF)
+  Destination:       IO_SSEG<6> (PAD)
+  Source Clock:      clock2 rising
+
+  Data Path: IO_SSEG_6 to IO_SSEG<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  IO_SSEG_6 (IO_SSEG_6)
+     OBUF:I->O                 2.571          IO_SSEG_6_OBUF (IO_SSEG<6>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock1'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            sequence_7 (FF)
+  Destination:       IO_LED<7> (PAD)
+  Source Clock:      clock1 rising
+
+  Data Path: sequence_7 to IO_LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.579  sequence_7 (sequence_7)
+     OBUF:I->O                 2.571          IO_LED_7_OBUF (IO_LED<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock M_CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+M_CLOCK        |    4.645|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock1         |    8.691|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock1         |    3.219|         |         |         |
+clock2         |    6.713|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 24.42 secs
+ 
+--> 
+
+Total memory usage is 298224 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  116 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+
